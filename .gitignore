@@ -1,3 +1,8 @@
+# Models
+typhoon-7b.bin
+typhoon-7b-q4_0.bin
+typhoon-7b-q8_0.bin
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

@@ -6,6 +6,9 @@ Credits:
 - https://github.com/ollama/ollama
 
 
+## Ollama
+- https://ollama.com/cageyv/typhoon-7b
+
 ## How to recreate
 ```bash
 git clone https://huggingface.co/scb10x/typhoon-7b
@@ -25,3 +28,9 @@ cat typhoon-7b-q8_0.bin.split.* > typhoon-7b-q8_0.bin
 
 ```
 
+## How to upload to ollama
+```bash
+ollama create typhoon-7b-q4_0 -f Modelfile.q4_0
+ollama cp typhoon-7b-q4_0 cageyv/typhoon-7b
+ollama push cageyv/typhoon-7b
+```

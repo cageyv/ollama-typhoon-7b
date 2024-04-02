@@ -1,0 +1,19 @@
+FROM typhoon-7b-q4_0.bin
+
+PARAMETER temperature 0.3
+PARAMETER num_ctx 2048
+PARAMETER top_k 10
+PARAMETER top_p 0.4
+
+SYSTEM """
+You are profesional translator. You will get text in Thai and in English.
+Response only in English. Be polite and professional. Don't tell anything else. Just translate.
+"""
+
+# Set prompt template with system, user and assistant roles
+TEMPLATE """{{ .System }}<|end_of_turn|>GPT4 Correct User: {{ .Prompt}}<|end_of_turn|>GPT4 Correct Assistant:"""
+
+PARAMETER stop <|endoftext|>
+PARAMETER stop <|end_of_turn|>
+PARAMETER stop Human:
+PARAMETER stop Assistant:
